@@ -1,0 +1,30 @@
+version: '3'
+
+services:
+ superheroesapi:
+  build: .
+  ports:
+   - "3001:80"
+  depends_on:
+   - db
+   - cache
+  links:
+   - db:db
+   - cache:cache
+
+ db:
+  build: ./Database
+  ports:
+   - "1433:1433"
+  volumes:
+   - ./.db:/var/opt/mssql/
+   - /var/opt/mssql/data
+  environment:
+   SA_PASSWORD: "SuperHer0esDbPa!s"
+   ACCEPT_EULA: "Y"
+
+
+ cache:
+  image: redis:alpine
+  ports:
+   - "16379:6379"

@@ -1,0 +1,41 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Interfaces\" />
+    <Folder Include="Interfaces\Repositories\" />
+    <Folder Include="Entities\" />
+    <Folder Include="CommandHandlers\" />
+    <Folder Include="Commands\" />
+    <Folder Include="Commands\Superhero\" />
+    <Folder Include="Commands\Superpower\" />
+    <Folder Include="EventHandlers\" />
+    <Folder Include="Events\" />
+    <Folder Include="Events\Superhero\" />
+    <Folder Include="Interfaces\Bus\" />
+    <Folder Include="Validations\Superpower\" />
+    <Folder Include="Interfaces\" />
+    <Folder Include="Interfaces\Cache\" />
+    <Folder Include="Events\Superpower\" />
+    <Folder Include="Commands\ProtectionArea\" />
+    <Folder Include="Validations\ProtectionArea\" />
+    <Folder Include="Enums\" />
+    <Folder Include="Commands\AuditEvent\" />
+    <Folder Include="Validations\AuditEvent\" />
+    <Folder Include="Interfaces\Services\" />
+    <Folder Include="Commands\User\" />
+    <Folder Include="Validations\User\" />
+    <Folder Include="Interfaces\Auth\" />
+    <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Class1.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="MediatR" Version="5.1.0" />
+    <PackageReference Include="FluentValidation" Version="7.6.105" />
+  </ItemGroup>
+</Project>
